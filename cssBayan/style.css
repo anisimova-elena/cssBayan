@@ -7,24 +7,44 @@ body {
   border: solid 1px grey;
   overflow-y: scroll;
 }
+button {
+  padding: 0;
+}
 .list {
   border-top: solid 1px grey;
   margin: 0 auto;
   max-width: 500px;
   list-style: none;
 }
-.item {
-  max-height: 40px;
-  overflow: hidden;
-  padding: 5px 10px;
-  border-bottom: solid 1px grey;
+.btn {
+  max-height: 46px;
+  transition: max-height 0.5s;
+  width: 100%;
+  border-width: 0;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.btn:focus + .item{
+  max-height: 500px;
   transition: max-height 0.5s;
 }
+.item {
+  max-height: 0px;
+  overflow: hidden;
+  border-bottom: solid 1px grey;
+  transition: max-height 0.5s;
+  cursor: pointer;
+}
 .text {
+  padding: 5px 10px;
   font-size: 30px;
+  background-color: rgb(239,239,239);
 }
 .image {
-  margin: 10px 15px;
-  width: calc(100% - 30px);
+  margin: 10px calc(30%/2);
+  width: 70%;
 }
-
+.btn:hover + .item{
+  max-height: 500px;
+  transition: max-height 0.5s;
+}
