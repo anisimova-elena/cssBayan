@@ -1,14 +1,22 @@
 ul {
   padding-inline-start: 0;
 }
+
 body {
   max-width: 40rem;
   margin: 0 auto;
   border: solid 1px grey;
   overflow-y: scroll;
+  padding: 0.4rem 0.625rem;
 }
-button {
-  padding: 0;
+
+fieldset {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
 }
 
 .list {
@@ -17,18 +25,28 @@ button {
   max-width: 32rem;
   list-style: none;
 }
-.btn {
+
+.text {
+  display: block;
   max-height: 3rem;
   transition: max-height 0.5s;
-  width: 100%;
   border-width: 0;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.625rem;
+  background-color: rgb(239, 239, 239);
 }
-.btn:focus + .item{
+
+.text:hover~.item {
   max-height: 32rem;
   transition: max-height 0.5s;
 }
+
+.line_checkbox {
+  display: none;
+}
+
 .item {
   max-height: 0;
   overflow: hidden;
@@ -36,17 +54,13 @@ button {
   transition: max-height 0.5s;
   cursor: pointer;
 }
-.text {
-  font-size: 1.5rem;
-  padding: 0.4rem 0.625rem;
-  background-color: rgb(239,239,239);
-  
-}
+
 .image {
   margin: 0.7rem calc(30%/2);
   width: 70%;
 }
-.btn:hover + .item{
+
+.line_checkbox:checked~.item {
   max-height: 32rem;
   transition: max-height 0.5s;
 }
